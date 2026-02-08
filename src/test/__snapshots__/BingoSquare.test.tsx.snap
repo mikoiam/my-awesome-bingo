@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BingoSquare > matches snapshot - default 1`] = `
+<div>
+  <button
+    aria-label="Has a plant on their desk"
+    aria-pressed="false"
+    class="relative flex items-center justify-center p-3 text-center rounded-md transition-transform duration-150 select-none min-h-[72px] text-base leading-tight bg-foam  hover:scale-105 motion-reduce:transform-none"
+    style="border: 1px solid var(--color-coffee-brown);"
+  >
+    <span
+      class="wrap-break-word hyphens-auto"
+    >
+      Has a plant on their desk
+    </span>
+  </button>
+</div>
+`;
+
+exports[`BingoSquare > matches snapshot - marked 1`] = `
+<div>
+  <button
+    aria-label="Has a plant on their desk"
+    aria-pressed="true"
+    class="relative flex items-center justify-center p-3 text-center rounded-md transition-transform duration-150 select-none min-h-[72px] text-base leading-tight bg-foam  hover:scale-105 motion-reduce:transform-none"
+    style="border: 1px solid var(--color-coffee-brown); background: var(--color-leaf-green); color: white;"
+  >
+    <span
+      class="wrap-break-word hyphens-auto"
+    >
+      Has a plant on their desk
+    </span>
+    <span
+      class="absolute top-1 right-1 text-xs"
+      style="color: var(--color-coffee-espresso);"
+    >
+      ✓
+    </span>
+  </button>
+</div>
+`;

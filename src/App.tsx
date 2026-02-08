@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="min-h-screen font-body">
       <GameScreen
         board={board}
         winningSquareIds={winningSquareIds}
@@ -31,7 +31,7 @@ function App() {
       {showBingoModal && (
         <BingoModal onDismiss={dismissModal} />
       )}
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BingoModal > has dialog role and focuses primary button 1`] = `
+<div>
+  <div
+    aria-modal="true"
+    class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+    role="dialog"
+  >
+    <div
+      class="bg-foam rounded-xl p-6 max-w-xs w-full text-center shadow-card transform transition-all duration-200"
+    >
+      <img
+        alt="celebrate"
+        class="mx-auto mb-3 w-14 h-14"
+        src="/images/coffee-cup.svg"
+      />
+      <h2
+        class="text-3xl font-heading text-amber-500 mb-2"
+      >
+        BINGO!
+      </h2>
+      <p
+        class="text-muted-gray mb-6"
+      >
+        You completed a line!
+      </p>
+      <button
+        class="w-full bg-[color:var(--color-cinnamon-accent)] text-white font-semibold py-3 px-6 rounded-lg active:opacity-90 transition-colors"
+      >
+        Keep Playing
+      </button>
+    </div>
+  </div>
+</div>
+`;

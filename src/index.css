@@ -1,11 +1,36 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  /* Cozy Coffee Shop theme tokens */
+  --color-coffee-espresso: #2f1a18; /* primary text / deep accent (darker for contrast) */
+  --color-coffee-brown: #7A4B3A; /* card border / warm brown */
+  --color-cinnamon-accent: #C47A3A; /* CTA */
+  --color-cream: #F6EFE6; /* page background */
+  --color-foam: #FFF7EA; /* card surface */
+  --color-leaf-green: #6B8B5A; /* marked state */
+  --color-bingo-amber: #F2C94C; /* win accent */
+  --color-muted-gray: #4B4B4B; /* secondary text (darker) */
+
+  /* Spacing & radii */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-soft: 0 6px 18px rgba(33, 24, 21, 0.08);
+  --shadow-card: 0 10px 30px rgba(33, 24, 21, 0.08);
+
+  /* Legacy aliases (keep for compatibility) */
+  --color-accent: var(--color-cinnamon-accent);
+  --color-accent-light: #E18F53;
+  --color-marked: var(--color-leaf-green);
+  --color-marked-border: #4C7A53;
+  --color-bingo: var(--color-bingo-amber);
 }
 
 html,
@@ -16,6 +41,34 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-cream);
+  background-image: url('/images/paper-texture-400.svg');
+  background-repeat: repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-coffee-espresso);
+}
+
+/* Utility font classes for components */
+.font-heading { font-family: 'Playfair Display', Georgia, serif; }
+.font-body { font-family: Inter, system-ui, -apple-system, sans-serif; }
+
+/* Focus and accessibility helpers */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 4px rgba(196,122,58,0.22);
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
